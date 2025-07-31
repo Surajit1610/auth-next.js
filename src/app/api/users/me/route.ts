@@ -3,6 +3,8 @@ import User from "<@>/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import { connect } from "<@>/db_config/dbConfig";
 
+connect()
+
 export async function GET(request: NextRequest){
     try {
         const userId = await getDataFromToken(request)

@@ -4,7 +4,7 @@ import axios from "axios"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function verifyEmailPage(){
+export default function VerifyEmailPage(){
     const [token, setToken] = useState("")
     const [verified, setVerified] = useState(false)
     const [error, setError] = useState(false)
@@ -22,7 +22,7 @@ export default function verifyEmailPage(){
     useEffect(()=>{
         const urlToken = window.location.search.split('=')[1]
         setToken(urlToken || "")
-    },[])
+    })
 
     useEffect(()=>{
         if(token.length > 0){
