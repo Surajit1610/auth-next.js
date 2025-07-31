@@ -1,4 +1,4 @@
-export default function UaerProfile({params}: any){
+export default function UaerProfile({params}){
     return(
         <div className="flex flex-col items-center justify-center min-h-screen">
             <h1>Profile</h1>

@@ -2,7 +2,7 @@ import nodemailer from "nodemailer"
 import User from "<@>/models/userModel"
 import bcryptjs from "bcryptjs"
 
-export const sendEmail = async({email, emailType, userId}: any)=> {
+export const sendEmail = async({email, emailType, userId})=> {
     try {
         const hashedToken = await bcryptjs.hash(userId.toString(), 10)
 
@@ -37,7 +37,7 @@ export const sendEmail = async({email, emailType, userId}: any)=> {
     
     return mailResponse
         
-    } catch (error: any) {
+    } catch (error) {
         throw new Error(error.message)
     }
 }
