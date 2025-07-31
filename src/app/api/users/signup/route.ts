@@ -48,7 +48,7 @@ export async function POST(request: NextRequest){
         })
         
         
-    } catch (error: any) {
-        return NextResponse.json({error: error.massage},{status: 500})
+    } catch (error) {
+        return NextResponse.json({error: error},{status: 500})
     }
 }

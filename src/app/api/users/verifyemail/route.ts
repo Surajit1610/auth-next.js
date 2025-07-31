@@ -1,7 +1,8 @@
 import { connect } from "<@>/db_config/dbConfig";
 import User from "<@>/models/userModel"
-import { error } from "console";
 import { NextRequest, NextResponse } from "next/server";
+
+connect()
 
 export async function POST(request: NextRequest){
     try {
@@ -25,7 +26,7 @@ export async function POST(request: NextRequest){
             message: "user verified successfilly",
             success: true
         })
-    } catch (error: any) {
-        return NextResponse.json({error: error.message}, {status:500})
+    } catch (error) {
+        return NextResponse.json({error: error}, {status:500})
     }
 }
