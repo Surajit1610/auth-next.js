@@ -37,7 +37,12 @@ export default function LoginPage() {
             }else{
                 seteButtonDisabled(true)
             }
-        }, [user])
+        }, [user]
+    )
+
+    const forgotPassword = async ()=>{
+
+    }
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -56,13 +61,19 @@ export default function LoginPage() {
 
             <label htmlFor="password">password</label>
             <input 
-            className="p-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:border-gray-600"
+            className="p-2 border border-gray-300 rounded-md mb-2 focus:outline-none focus:border-gray-600"
             type="password"
             id="password"
             value={user.password}
             placeholder="password"
             onChange={(e)=>setUser({...user, password: e.target.value})}
             />
+
+            <p
+            className="mb-3 hover:text-blue-500 hover:cursor-pointer"
+            onClick={forgotPassword}
+            >Forgot password</p>
+
             <button
             onClick={onLogin}
             className="p-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:border-gray-600"
