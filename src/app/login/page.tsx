@@ -41,7 +41,7 @@ export default function LoginPage() {
     )
 
     const forgotPassword = async ()=>{
-
+        router.push("/forgotpassword")
     }
 
     return (
